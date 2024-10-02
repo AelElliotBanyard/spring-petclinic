@@ -23,5 +23,6 @@ jobs:
 
       - name: 'Build Inventory Image'
         run: |
+            mvn package
             docker build . --tag ghcr.io/aelelliotbanyard/petclinic:latest
             docker push ghcr.io/aelelliotbanyard/petclinic:latest
